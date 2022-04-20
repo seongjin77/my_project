@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">초보에요</h1>
+
+    <div class="alert-box" id="btn">알림창임
+        <button onclick="열고닫기('none')">닫기</button>
+    </div>
+    
+    <button onclick="열고닫기('block','아이디를 입력하세요')">버튼1</button>
+    <button onclick="열고닫기('block','비밀번호를 입력하세요')">버튼2</button>
+    
+    
+    
+    <script>
+        document.getElementById("hello").innerHTML = '안녕';
+        document.getElementById("hello").style.fontSize = '16px';
+        document.getElementById("hi").innerHTML = '고수에요';
+
+         function 열고닫기(파라미터,알림창){
+            document.getElementById('btn').style.display = 파라미터;
+            alert(알림창);
+         }
+
+
+    </script>
+
+
+</body>
+</html>
