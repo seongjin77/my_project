@@ -1,0 +1,14 @@
+@charset "utf-8";
+.list-group{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+.bgc{
+    position:absolute;
+    width: 100%;
+    color: black;
+
+}
