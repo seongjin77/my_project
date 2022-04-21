@@ -34,12 +34,14 @@
       
       <p class="hello">안녕</p>
       <p class="bye">잘가</p>
+      <button class="logbtn">로그인버튼</button>
       
-      <div class="bgc"></div>
+      <div class="bgc">
       <div class="alertbox">
-        <button class="btn-1">로그인</button>
+        로그인하세요
+        <button class="btn-1">닫기</button>
       </div>
-      
+      </div>
 
       <script>
       
@@ -53,6 +55,10 @@
       $('.bye').html('너도잘가');
       $('.bye').css('color', 'green');
       
+      // 로그인을 눌렀을때 모달창에 bgcon 부착
+      document.getElementsByClassName('btn-1')[0].addEventListener('click', function(){
+      document.getElementsByClassName('bgc')[0].classList.toggle('bgcon')
+      });
       
       
       </script>
