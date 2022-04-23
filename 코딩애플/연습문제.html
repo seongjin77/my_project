@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+</head>
+<body>
+
+ <!-- 369게임 <input type="text" id="game" > -->
+
+
+<script>
+    /* 인풋의 값이 3의 제곱값이면 박수 알림이 나와야함 */
+    /* 3으로 나누었을때 나머지가 0이면 알림이 나와야함!!! */
+
+    // let num = document.getElementById('game');
+
+    function 삼육구게임(num) {
+
+        if(num % 3 === 0 && num % 9 !==0 ){
+            console.log('박수')
+        }
+        else if(num % 9 ===0 ) {
+            console.log('박수두번');
+        }  
+        else {
+            console.log('통과');
+        }
+
+    }
+    
+
+    삼육구게임(9);
+
+
+</script>
+
+
+    
+</body>
+</html>
