@@ -39,21 +39,21 @@
           <!-- form 형식은 action을 써야함 -->
           <form action="form전송용.html">
             <div class="my-3">
-              <input type="text" id="loginput" class="form-control">
+              <input type="text" id="login" class="form-control">
              </div>
              <div class="my-3">
-               <input type="password" class="form-control">
+               <input type="password" id="pwd" class="form-control">
              </div>
              <button type="submit" id="submit1" class="btn btn-primary">전송</button>
-             <button type="button" class="btn btn-danger" id="close">닫기</button>
+             <button type="button"id="close" class="btn btn-danger" >닫기</button>
           </form> 
         </div>
       </div> 
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      <!-- 자바스크립트 구역 -->
 
     <script>
         
@@ -71,23 +71,34 @@
         });
 
         /* 전송버튼 누르면 input에 입력한 값이 공백이면 알림창 띄어주세요~ */
+/*질문거리@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+           // var check = document.querySelectorAll('.form-control')[0].value; 
+            /* 이것도 되는코드. 클래스를 하나 지정해야지 작동함 [0] 빼면 작동을 안함 */
+            
+            
+            var k = document.getElementById('login');
+            
+            // var k = document.getElementById('login').value; 이걸로 할때 if문 조건문 k에 담았을때 안됨.
+            var p = document.getElementById('pwd');
 
-        //  var check = document.querySelector('#loginput').value; 되는 코드
-            var check = document.querySelectorAll('.form-control')[0].value; /* 이것도 되는코드. 클래스를 하나 지정해야지 작동함 [0] 빼면 작동을 안함 */
-
-        
-        
+        /*----------유효성 검사 함수  */
         document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
 
-          console.log('전송됨');
-          
           e.preventDefault();
-          
-          if(check == 0){
+
+
+          if(k.value === ''){
             alert('빈칸입니다');
-          } else {
-            console.log('전송됨2')
-          }
+            return false;
+          } else if (p.value === '' ) {
+            alert('비밀번호를 입력해주세요');
+            return false;
+           } else if(p.value.length < 6 ) {
+            
+            alert('비밀번호 숫자가 부족합니다');
+            return false;
+        
+           }
 
         });
 
