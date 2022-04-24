@@ -25,6 +25,28 @@
         document.querySelector('#switch').value= 'night';
     }" >
 
+<br>
+<br>
+
+    <!-- 중복을 변수에 담아서 줄여라 -->
+    <!-- id 때문에 코드를 사용하지 못할때 this를 고려해라 -->
+
+    <input type="button" value="night" onclick="
+
+    var target = document.querySelector('body');
+
+    if(this.value === 'night'){
+
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value= 'day';
+    }
+    else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value= 'night';
+    }" >
+
 
 
     <script>
