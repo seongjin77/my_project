@@ -34,8 +34,19 @@
             document.write(key+' : '+coworker[key]+'<br>');
 
 
-        }
+        };
 
+    </script>
+
+    <h3>Property & Method </h3>
+    <script>
+        coworker.showAll = function(){
+            for(var key in this){
+            document.write(key+' : '+this[key]+'<br>');
+                };
+        };
+        
+    coworker.showAll();
     </script>
 
 
