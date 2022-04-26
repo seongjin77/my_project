@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>객체의 시작</title>
+    <script src="switch.js"></script>
 </head>
 <body>
     
@@ -15,44 +16,7 @@
 <script>
 
 
-    function alistColor(color){
-        var alist = document.querySelectorAll('a');
-        var i=0;
-        while(i<alist.length){
-
-        alist[i].style.color= color;
-        i = i+1;
-    }
-};
-/* 스위처함수 시작 */
-    function switcher1(self){
-
-    var target = document.querySelector('body');
-
-    if(self.value === 'night'){
-
-    target.style.backgroundColor='black';
-    target.style.color='white';
-    self.value= 'day';
-
-    alistColor('green');
- 
-
-    }
-
-    else {
-
-    target.style.backgroundColor='white';
-    target.style.color='black';
-    self.value= 'night';
-    alistColor('red');
- 
     
-}
-
-    };
-
-
 </script>
 
     <input type="button" value="night" onclick="switcher1(this)" >
