@@ -20,6 +20,7 @@ memberObject['sientist'] = 'seongjin';
 memberObject.artist = 'chacha';
 
 console.group('object loop');
+
 for( var name in memberObject ){
     console.log(name , memberObject[name]);
     /* memberObject.name으로 쓰면 undefined가 뜸 . 뒤에는 변수가 올 수 없음 */
