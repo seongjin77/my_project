@@ -14,7 +14,7 @@ var kim = new Person('kim',10,50);
 var lee = new Person('lee',10,15);
 
 kim.sum = function(){
-    ret
+    return "modified : "+ (this.first + this.second);
 };
 
 console.log('kim', kim.sum());
