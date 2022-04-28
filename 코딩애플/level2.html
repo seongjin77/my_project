@@ -28,24 +28,25 @@
 
 어떻게 코드를 짜면 될까요?  */
 
-        var 예금액 = 60000;
+        var 예금액 = 10000;
         var 미래예금액 = 0;
 
         if(예금액>50000){
 
             for(i=0;i<2;i++){
                 예금액 = 예금액*1.2
-            
+                
             };
 
+            console.log(예금액);
 
         } else {
 
             for(i=0; i<2; i++){
                 예금액 = 예금액*1.15
-                console.log(예금액);
             }
 
+            console.log(예금액);
 
         }
 
@@ -68,18 +69,26 @@
 <button id="send-answer">제출</button>
 
 <script>
-    /* 제출버튼 눌렀을때 */
+    let count = 0;
+    let a = document.getElementById("answer")
+    /* 제출버튼 눌렀을때 카운트가1 그리고 정답이면 성공알람, 카운트가 3 못맞추면 멍청아 */
     document.getElementById("send-answer").addEventListener("click", function(){
-
-        if(){
-
-        }
-        else if (){
+        count = count+1;
+        console.log(count); 
+        
+        if(a.value==='1335'){
             
-        }
-
-    });
-
+                alert('성공');
+            
+            }
+            else if (a.value!==1335 && count >=3){
+                alert('멍청아');
+                }
+            else {
+                alert('틀렸습니다');
+            }
+            });
+            
 
 </script>
     
