@@ -4,13 +4,17 @@ class person{
         this.name= name;
         this.first= first;
         this.second=second;
-        
     };
+
+     sum(){
+         return 'prototype: ' + (this.first+this.second);
+     };
+
 
 };
 
 var kim = new person('kim',10,20);
-console.log('출력', kim);
+console.log('출력', kim.sum());
 
 /* class 안에서 constructor 함수는 객체가 생성될때 호출된다. */
 
