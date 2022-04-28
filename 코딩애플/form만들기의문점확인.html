@@ -75,14 +75,16 @@
 
         /* 전송버튼 누르면 input에 입력한 값이 공백이면 알림창 띄어주세요~ */
 /*질문거리@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-           // var check = document.querySelectorAll('.form-control')[0].value; 
+            var k = document.querySelector('#login').value; 
+          /* @@@@@@@@@@@@@@왜 안될까@@@@@ */
+            console.log(k);
             /* 이것도 되는코드. 클래스를 하나 지정해야지 작동함 [0] 빼면 작동을 안함 */
             
             
-            var k = document.getElementById('login');
+            //var k = document.getElementById('login');
             
             // var k = document.getElementById('login').value; 이걸로 할때 if문 조건문 k에 담았을때 안됨.
-            var p = document.getElementById('pwd');
+            
 
         /*----------유효성 검사 함수  */
         document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
@@ -90,25 +92,14 @@
           e.preventDefault();
 
 
-          if(k.value === ''){
+          if(k === ''){
             alert('빈칸입니다');
             return false;
-          } else if (p.value === '' ) {
-            alert('비밀번호를 입력해주세요');
-            return false;
-           } else if(p.value.length < 6 ) {
-            
-            alert('비밀번호 숫자가 부족합니다');
-            return false;
-        
-           }
+          } 
            
         });
 
         /* 다크모드 만드는 코드 */
-
-        // badge 클릭횟수가 홀수면 내부 글자 Light로 변경
-        // badge 클릭횟수가 짝수면 내부 글자 Dark로 변경
 
         
 
