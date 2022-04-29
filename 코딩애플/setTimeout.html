@@ -76,6 +76,33 @@
         });
         
 
+        /* 공백 및 이메일 검사 */
+        
+        
+        document.getElementById('submit1').addEventListener('click',function(){
+
+          let k = document.getElementById('login').value; 
+          let p = document.getElementById('pwd').value;
+          if(k === ''){
+                alert('빈칸입니다');
+          }
+          else if (p === ''){
+                alert('비밀번호를 입력해주세요');
+          }
+          else if( p.length<6) {
+                alert('비밀번호 숫자가 부족합니다')
+          }
+          else if(/[A-Z]/.test(p)==0){
+                alert('대문자가 없습니다');
+          }
+
+        });
+
+
+
+
+        /* -----------------------------------setInterval 함수 */
+
         // setTimeout(function(){
         //     document.getElementById('5second').style.display = 'none';
         // } ,5000);
