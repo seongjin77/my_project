@@ -84,16 +84,15 @@
 // var k = document.getElementById('login').value; 이걸로 할때 if문 조건문 k에 담았을때 안됨.
 
 var k = document.querySelector('#login').value; 
-console.log(k);
 
-        /*----------유효성 검사 함수  */
-        document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
-
-          e.preventDefault();
-
+/*----------유효성 검사 함수  */
+document.getElementsByClassName('btn-primary')[0].addEventListener('click', function(e){
+  
+  e.preventDefault();
+  
           /* k === '' 으로하면 작동이 되지 않음. */
 
-          if(k == ''){
+          if(k === ''){
             alert('빈칸입니다');
             return false;
           } 
