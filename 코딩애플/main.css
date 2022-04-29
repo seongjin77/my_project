@@ -40,3 +40,17 @@
     border-radius: 5px;
     padding: 30px;
   } 
+
+  .slide{
+      width: 300vw;
+
+  }
+
+  .slide-box{
+    width: 100%;
+    display: flex;
+  }
+
+  .slide-box img{
+      width: 100%;
+  }
