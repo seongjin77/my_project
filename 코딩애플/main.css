@@ -43,13 +43,14 @@
 
   .slide{
       width: 300vw;
+      display: flex;
 
   }
 
   .slide-box{
-    width: 100%;
-    display: flex;
+    width: 100vw;
   }
+
 
   .slide-box img{
       width: 100%;
