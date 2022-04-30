@@ -66,7 +66,7 @@
           <div class="slide-box">
             <img src="car1.png">
           </div>
-          <div class="slide-box">
+          <div class="slide-box ">
             <img src="car2.png">
           </div>
           <div class="slide-box">
@@ -76,9 +76,9 @@
         
       </div>
 
-      <button class="slide-btn">1</button>
-      <button class="slide-btn">2</button>
-      <button class="slide-btn">3</button>
+      <button class="slide-btn1">1</button>
+      <button class="slide-btn2">2</button>
+      <button class="slide-btn3">3</button>
       <!-- 스크립트 구역 -->
       <script>
           
@@ -147,6 +147,31 @@
           }
         },1000);
         
+        /*-----------슬라이드 구역--------------- */
+
+        /* 1번을 누르면 슬라이드 -100vw가 된다 */
+
+        
+        function 이동1(){
+          
+          document.getElementsByClassName('slide')[0].classList.toggle('s1');
+          
+        };
+        
+        function 이동2(){
+
+          document.getElementsByClassName('slide')[0].classList.toggle('s2');
+        }
+
+        function 이동3(){
+          document.getElementsByClassName('slide')[0].classList.toggle('s3');
+        }
+
+
+        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동1());
+        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동2());
+        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동3());
+
         
         
         </script>

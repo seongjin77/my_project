@@ -55,3 +55,16 @@
   .slide-box img{
       width: 100%;
   }
+
+  .s1{
+    transform: translateX(0vw);
+    transition: all .7s;
+  }
+  .s2{
+      transform: translateX(-100vw);
+      transition: all .7s;
+  }
+  .s3{
+    transform: translateX(-200vw);
+    transition: all .7s;
+  }
