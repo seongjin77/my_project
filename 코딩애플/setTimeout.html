@@ -151,39 +151,48 @@
 
         /* 내가만든 함수는 이미 눌려있는 상태로 반응을 한다 */
 
-        // document.getElementsByClassName('slide_btn1')[0].addEventListener("click", 이동1());
+        document.getElementsByClassName('slide_btn1')[0].addEventListener("click", 이동1);
         
-        // function 이동1(){
+        function 이동1(){
           
-        //   document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(0vw)'
           
-        // };
+        };
        
-          document.getElementsByClassName('slide_btn2')[0].addEventListener('click',function(){
-
-              document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
-
-          });
-          document.getElementsByClassName('slide_btn1')[0].addEventListener('click',function(){
-
-              document.getElementsByClassName('slide')[0].style.transform = 'translateX(0vw)'
-
-          });
-          document.getElementsByClassName('slide_btn3')[0].addEventListener('click',function(){
-
-              document.getElementsByClassName('slide')[0].style.transform = 'translateX(-200vw)'
-
-          });
+        document.getElementsByClassName('slide_btn2')[0].addEventListener("click", 이동2);
         
-          /* 다음버튼 누르면 지금 보이는 사진이 1이면 2번 사진보여주세요
-          지금 보이는 사진이 2이면 3번 사진 보여주세요
-           */
+        function 이동2(){
+          
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
+          
+        };
         
+        document.getElementsByClassName('slide_btn3')[0].addEventListener("click", 이동3);
         
+        function 이동3(){
+          
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(-200vw)'
+          
+        };
+
+
+
+        /* 다음버튼을 누르면
+         첫번째 슬라이드는 맨 뒤로 이동하고 다음 슬라이드는 땡겨진다.  */
+
+
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-   
+        
+        <button class="next">다음</button>
+
+        <script>
+
+
+
+        </script>
+
   </body>
 </html>
