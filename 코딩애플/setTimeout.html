@@ -76,9 +76,9 @@
         
       </div>
 
-      <button class="slide-btn1">1</button>
-      <button class="slide-btn2">2</button>
-      <button class="slide-btn3">3</button>
+      <button class="slide_btn1">1</button>
+      <button class="slide_btn2">2</button>
+      <button class="slide_btn3">3</button>
       <!-- 스크립트 구역 -->
       <script>
           
@@ -149,28 +149,22 @@
         
         /*-----------슬라이드 구역--------------- */
 
-        /* 1번을 누르면 슬라이드 -100vw가 된다 */
+        /* 내가만든 함수는 이미 눌려있는 상태로 반응을 한다 */
 
+        // document.getElementsByClassName('slide_btn1')[0].addEventListener("click", 이동1());
         
-        function 이동1(){
+        // function 이동1(){
           
-          document.getElementsByClassName('slide')[0].classList.toggle('s1');
+        //   document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
           
-        };
+        // };
+       
+          document.getElementsByClassName('slide_btn2')[0].addEventListener('click',function(){
+
+              document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
+
+          });
         
-        function 이동2(){
-
-          document.getElementsByClassName('slide')[0].classList.toggle('s2');
-        }
-
-        function 이동3(){
-          document.getElementsByClassName('slide')[0].classList.toggle('s3');
-        }
-
-
-        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동1());
-        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동2());
-        document.getElementsByClassName('slide-btn1')[0].addEventListener('click', 이동3());
 
         
         
