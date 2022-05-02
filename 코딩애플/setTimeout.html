@@ -197,11 +197,20 @@
 
             let curIndex = 0; // current slide index
 
+            // copy first and last slide
+            let firstChild = slide.firstElementChild;
+            let lastChild = slide.lastElementChild;
+            let cloneFirst = firstChild.cloneNode(true);
+            let cloneLast = lastChild.cloneNode(true);
+
+            // add copied Slides
+            slide.appendChild(cloneFirst);
+            slide.insertBefore(cloneLast, );
 
             /* 다음버튼 클릭 함수 */
             slide_next.addEventListener('click', function(){
 
-            if(curIndex <= slideLen-1){
+            if(curIndex < slideLen-1){
               slide.style.transition = '1s';
               slide.style.transform = 'translate3d(-100*(curIndex+1)vw, 0px, 0px)';
             };/* if함수 끝 */
