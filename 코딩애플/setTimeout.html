@@ -190,14 +190,13 @@
 
         <script>
 
-            const slide = document.querySelectorAll('.slide');
-            const slide2 = document.querySelector('.slide');
+            // const slide = document.querySelectorAll('.slide');
+            const slide = document.querySelector('.slide');
             const slide_box = document.getElementsByClassName('slide-box');
             const slide_next = document.querySelector('.next');
             const slideLen = slide_box.length;
 
             console.log(slide);
-            console.log(slide2)
 
             let curIndex = 0; // current slide index
 
@@ -224,7 +223,7 @@
             if(curIndex === -1){
               setTimeout(function(){
                 slide.style.transition = '0s';
-                slide.style.transform = 'translate3d(-'+100*(curIndex+1)+'vw, 0vw, 0vw)'
+                slide.style.transform = 'translate3d(-100vw, 0vw, 0vw)'
               },300);
               curIndex = -1;
             };
