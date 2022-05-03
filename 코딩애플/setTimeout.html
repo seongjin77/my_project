@@ -190,7 +190,7 @@
 
         <script>
 
-            const slide = document.getElementsByClassName('slide');
+            const slide = document.querySelectorAll('.slide');
             const slide2 = document.querySelector('.slide');
             const slide_box = document.getElementsByClassName('slide-box');
             const slide_next = document.querySelector('.next');
@@ -224,13 +224,15 @@
             if(curIndex === -1){
               setTimeout(function(){
                 slide.style.transition = '0s';
-                slide.style.transform = 'translate3d('
+                slide.style.transform = 'translate3d(-'+100*(curIndex+1)+'vw, 0vw, 0vw)'
               },300);
+              curIndex = -1;
             };
-            
+
+            curIndex += 1;
 
 
-            });
+            });// 다음버튼 클릭 함수 끝///////////////
 
 
 

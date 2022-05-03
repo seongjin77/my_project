@@ -1,0 +1,8 @@
+getElementsByTagname, getElementsByClassName 메서드가 반환하는 HTMLCollection 객체는 노드
+객체의 상태 변화를 실시간으로 반영하는 살아있는 live DOM 컬렉션 객체입니다. 여기서 
+'살아있다'라는 의미는 객체가 스스로 실시간 노드 객체의 상태 변경을 반영함을 의미합니다.
+ 간단한 예시를 보며 이해해봅시다.
+
+
+ NodeList
+ querySelectorAll 등의 메서드가 반환하는 NodeList 객체는 노드 객체의 상태 변화를 반영하지 않는 non-live DOM 컬렉션 객체입니다. NodeList는 앞의 HTMLCollection과 다르게 노드가 변경되도 그 상태를 반영하지 않습니다. 
