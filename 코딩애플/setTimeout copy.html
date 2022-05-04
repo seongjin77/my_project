@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- 상단 메뉴바 -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand">JSShop</span>
+          <span class="badge bg-dark">Dark 🔄</span>
+
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav> 
+
+      <!-- 메뉴 리스트 -->
+      <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul> 
+
+      <div class="logbg">
+          <h2>Shirts on Sale</h2>
+          <button id="btnlog" class="btn btn-danger">로그인버튼</button>
+      </div>
+
+      <!-- 로그인 모달창 -->
+      <div class="black-bg">
+        <div class="white-bg">
+          <h4>로그인하세요</h4>
+          <!-- form 형식 : 서버로 유저정보를 전송하려고 하는것임 -->
+          <!-- form 형식은 action을 써야함 -->
+          <form action="#">
+            <div class="my-3">
+              <input type="text" id="login" class="form-control">
+             </div>
+             <div class="my-3">
+               <input type="password" id="pwd" class="form-control">
+             </div>
+             <button type="submit" id="submit1" class="btn btn-primary">전송</button>
+             <button type="button"id="close" class="btn btn-danger" >닫기</button>
+          </form> 
+        </div>
+      </div> 
+
+      <div id="5second" class="alert alert-danger">
+        <spna id="second">5</spna>초 이내 구매시 사은품 증정
+      </div>
+
+      <!-- 슬라이드 구역 -->
+      <div style="overflow: hidden;">
+
+        <div class="slide">
+          <div class="slide-box">
+            <img src="car1.png">
+          </div>
+          <div class="slide-box ">
+            <img src="car2.png">
+          </div>
+          <div class="slide-box">
+            <img src="car3.png">
+          </div>
+        </div>
+        
+      </div>
+
+      <button class="slide_btn1">1</button>
+      <button class="slide_btn2">2</button>
+      <button class="slide_btn3">3</button>
+      <!-- 스크립트 구역 -->
+      <script>
+          
+          document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
+              document.getElementsByClassName('list-group')[0].classList.toggle('show');
+            });
+            
+            document.getElementById('btnlog').addEventListener('click', function(){
+            document.getElementsByClassName('black-bg')[0].classList.add('black-bg1');
+            
+        });
+        
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementsByClassName('black-bg')[0].classList.remove('black-bg1');
+        });
+        
+
+        /* 공백 및 이메일 검사 */
+        
+        
+        document.getElementById('submit1').addEventListener('click',function(){
+
+          let k = document.getElementById('login').value; 
+          let p = document.getElementById('pwd').value;
+          if(k === ''){
+                alert('빈칸입니다');
+          }
+          else if (p === ''){
+                alert('비밀번호를 입력해주세요');
+          }
+          else if( p.length<6) {
+                alert('비밀번호 숫자가 부족합니다')
+          }
+          else if(/[A-Z]/.test(p)==0){
+                alert('대문자가 없습니다');
+          }
+
+        });
+
+
+
+
+        /* -----------------------------------setInterval 함수 */
+
+        // setTimeout(function(){
+        //     document.getElementById('5second').style.display = 'none';
+        // } ,5000);
+
+
+        /* 1초마다 숫자 1씩 감소하고 0이되면 안보이게 처리한다 */
+
+        
+        let count = 5;
+        
+        setInterval(function(){
+          
+          
+          if(count>0){
+            
+            document.getElementById('second').innerHTML = count;
+            
+            count -= 1;
+
+          } else {
+            document.getElementById('5second').style.display = 'none';
+          }
+        },1000);
+        
+        /*-----------슬라이드 구역--------------- */
+
+        /* 내가만든 함수는 이미 눌려있는 상태로 반응을 한다 */
+
+        document.getElementsByClassName('slide_btn1')[0].addEventListener("click", 이동1);
+        
+        function 이동1(){
+          
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(0vw)'
+          
+        };
+       
+        document.getElementsByClassName('slide_btn2')[0].addEventListener("click", 이동2);
+        
+        function 이동2(){
+          
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
+          
+        };
+        
+        document.getElementsByClassName('slide_btn3')[0].addEventListener("click", 이동3);
+        
+        function 이동3(){
+          
+          document.getElementsByClassName('slide')[0].style.transform = 'translateX(-200vw)'
+          
+        };
+
+
+
+        /* 다음버튼을 누르면
+         첫번째 슬라이드는 맨 뒤로 이동하고 다음 슬라이드는 땡겨진다.  */
+
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        
+        <button class="next">다음</button>
+
+        <script>
+
+            var 지금사진 = 1;
+
+            /* 다음버튼 클릭 함수 */
+            slide_next.addEventListener('click', function(){
+
+            if(지금사진 == 1){
+              document.getElementsByClassName('slide')[0].style.transform = 'translateX(-100vw)'
+              지금사진 =+ 1;
+            } else if(지금사진 == 2){
+              document.getElementsByClassName('slide')[0].style.transform = 'translateX(-200vw)'
+              지금사진 += 1;
+            }
+
+              
+
+          
+
+            });// 다음버튼 클릭 함수 끝///////////////
+
+
+
+
+        </script>
+
+  </body>
+</html>
