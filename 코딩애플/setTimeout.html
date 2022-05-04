@@ -208,7 +208,7 @@
 
             // add copied Slides
             slide.appendChild(cloneFirst);
-            slide.insertBefore(cloneLast, firstChild);
+            //slide.insertBefore(cloneLast, firstChild);
 
             let curSlide = slide_box[curIndex];
 
@@ -216,11 +216,11 @@
             slide_next.addEventListener('click', function(){
 
             if(curIndex <= slideLen-1){
-              slide.style.transition = '1s';
+              slide.style.transition = '.5s';
               slide.style.transform = 'translate3d(-'+100*(curIndex+1)+'vw, 0vw, 0vw)';
             };/* if함수 끝 */
 
-            if(curIndex === -1){
+            if(curIndex > slideLen-1){
               setTimeout(function(){
                 slide.style.transition = '0s';
                 slide.style.transform = 'translate3d(0vw, 0vw, 0vw)'
