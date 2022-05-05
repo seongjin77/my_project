@@ -80,7 +80,21 @@
       <button class="slide_btn2">2</button>
       <button class="slide_btn3">3</button>
 
-      <div style="height : 700px"></div>
+      <div style="height : 500px">
+          <div class="이자" style="width:200px; height: 100px; overflow-y: scroll; ">
+            이자(利子, 문화어: 리자, 영어: interest)는 경제학 및 법률 용어로서 원본인 유동자본
+            (화폐)의 대부로부터 발생하는 수익으로서, 원본액과 사용기간에 비례하여 일정한 이율에 
+            따라 지급되는 금전 기타의 대체물을 의미한다. 즉, 빌린 돈에 대한 사용료라고 볼 수 
+            있다. 길미, 변리(邊利), 변(邊), 이금(利金), 이문(利文)이라고도 한다.[1]
+
+      돈을 빌렸을 때 원금의 일정 비율인 이자를 지급해야 하고, 원금과 이자를 합친 금액을 빌려준 
+      사람에게 갚아야 한다. 특정 기간(통상적으로 한달 혹은 1년)동안 원금을 사용하는 대가로 지급해야 하는 원금의 비율을 '이자율'이라고 한다
+
+
+
+          </div>
+      
+      </div>
 
       <!-- 스크립트 구역 -->
       <script>
@@ -229,6 +243,23 @@
               } else {
                 document.getElementsByClassName('navbar-brand')[0].style.fontSize = '30px'
               }
+
+            });
+            
+
+            /* 내부박스 스크롤 */
+
+            
+            document.querySelector('.이자').addEventListener('scroll',function(){
+
+              let 실제높이 = document.querySelector('.이자').scrollHeight;
+              let 스크롤양 = document.querySelector('.이자').scrollTop;
+              let 박스높이 = document.querySelector('.이자').clientHeight;
+              
+                if(스크롤양+박스높이+5>실제높이){
+                  alert('다읽었습니다');
+                };
+
 
             });
 
