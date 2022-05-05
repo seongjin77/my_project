@@ -198,38 +198,37 @@
 
             console.log(slide);
 
-            let curIndex = 0; // current slide index
+            let 스크린 = 0; // current slide index
 
             // copy first and last slide
             let firstChild = slide.firstElementChild;
             let lastChild = slide.lastElementChild;
             let cloneFirst = firstChild.cloneNode(true);
-            let cloneLast = lastChild.cloneNode(true);
 
             // add copied Slides
             slide.appendChild(cloneFirst);
             //slide.insertBefore(cloneLast, firstChild);
 
-            let curSlide = slide_box[curIndex];
+            let curSlide = slide_box[스크린];
 
             /* 다음버튼 클릭 함수 */
             slide_next.addEventListener('click', function(){
 
-            if(curIndex <= slideLen-1){
+            if(스크린 < slideLen-1){
               slide.style.transition = '.5s';
-              slide.style.transform = 'translate3d(-'+100*(curIndex+1)+'vw, 0vw, 0vw)';
+              slide.style.transform = 'translate3d(-'+100*(스크린+1)+'vw, 0vw, 0vw)';
             };/* if함수 끝 */
 
-            if(curIndex > slideLen-1){
+            if(스크린 >= slideLen-1){
               setTimeout(function(){
-                slide.style.transition = '0s';
                 slide.style.transform = 'translate3d(0vw, 0vw, 0vw)'
-              },500);
-              curIndex = -1;
+                slide.style.transition = 'none';
+              },400);
+              스크린 = -1;
             };
 
-            curIndex += 1;
-
+            스크린 += 1;
+            console.log(스크린);
 
             });// 다음버튼 클릭 함수 끝///////////////
 
