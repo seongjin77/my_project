@@ -214,6 +214,24 @@
 
 
 
+            window.addEventListener('scroll', function(){
+
+              let 스크롤 = window.scrollY
+
+              /* 스크롤 위치가 300이상이면 js글자 크기를 50으로 바꿔주고 알림창을 띄어줘 */
+
+              if(스크롤==300){
+                  alert('이제 글자크기가 커집니다');
+              };
+
+              if(스크롤>300){
+                  document.getElementsByClassName('navbar-brand')[0].style.fontSize = '50px'
+              } else {
+                document.getElementsByClassName('navbar-brand')[0].style.fontSize = '30px'
+              }
+
+            });
+
 
         </script>
 
