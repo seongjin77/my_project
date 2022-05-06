@@ -248,21 +248,30 @@
             
 
             /* 내부박스 스크롤 */
-
+            
             
             document.querySelector('.이자').addEventListener('scroll',function(){
-
+              
               let 실제높이 = document.querySelector('.이자').scrollHeight;
               let 스크롤양 = document.querySelector('.이자').scrollTop;
               let 박스높이 = document.querySelector('.이자').clientHeight;
               
-                if(스크롤양+박스높이+5>실제높이){
-                  alert('다읽었습니다');
+              
+                  
+                 function 한번만(){ 
+                   if((스크롤양+박스높이+5>실제높이) && a==1){
+                    alert('다읽었습니다');
+
+                    a=false;
+
+                  };
                 };
-
-
-            });
-
+                
+                
+                
+                // clearTimeout(timer);
+              });
+              
 
         </script>
 
