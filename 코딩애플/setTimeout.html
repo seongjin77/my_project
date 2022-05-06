@@ -214,7 +214,7 @@
             /* 다음버튼 클릭 함수 */
             slide_next.addEventListener('click', function(){
 
-            if(스크린 < slideLen-1){
+            if(스크린 <= slideLen-1){
               slide.style.transition = '.5s';
               slide.style.transform = 'translate3d(-'+100*(스크린+1)+'vw, 0vw, 0vw)';
             };/* if함수 끝 */
@@ -223,7 +223,7 @@
               setTimeout(function(){
                 slide.style.transform = 'translate3d(0vw, 0vw, 0vw)'
                 slide.style.transition = 'none';
-              },400);
+              },500);
               스크린 = -1;
             };
 
