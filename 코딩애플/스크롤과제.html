@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스크롤과제</title>
+    <link rel="stylesheet" href="scroll.css"
 </head>
 <body>
     <div style="height: 700px;">
@@ -19,6 +20,18 @@
     <script>
 
     /* 페이지를 1% 읽으면 div박스의 길이는 1% ... 페이지 다 읽으면 div박스 길이 100% */
+
+    window.addEventListener('scroll',function(){
+        
+        let 스크롤 = window.scrollY
+        let 높이 = window.scrollh
+
+        console.log(스크롤);
+
+
+    });
+
+
         
     </script>
 
