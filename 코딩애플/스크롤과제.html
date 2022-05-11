@@ -20,8 +20,8 @@
     <script>
 
     /* scrollTop은 위에부터 스크롤한 양 혹은 수직 스크롤의 위치를 알 수있다. */
-    /* clientHeight 요소의 높이를 알 수 있다. 스크롤과는 무관. */
-    /* scrollHeghit는 스크롤 가능한 '실제' 높이를 알 수 있다. */
+    /* clientHeight 요소의 높이를 알 수 있다. 스크롤과는 무관. 패딩 포함/ 보더,스크롤바 마진제외 */
+    /* scrollHeghit는 스크롤 가능한 '실제' 높이를 알 수 있다. 마진만 제외 패딩,보더포함 */
 
 
     /* 페이지를 1% 읽으면 div박스의 길이는 1% ... 페이지 다 읽으면 div박스 길이 100% */
@@ -29,15 +29,17 @@
     window.addEventListener('scroll',function(){
         
         let 스크롤 = window.scrollY;
-        let 높이 = window.scrollHeight;
-
+        let 상자높이 = document.documentElement.clientHeight;
+        let 높이 = document.documentElement.scrollHeight;
+        
         console.log(스크롤);
+        console.log(상자높이);
         console.log(높이);
-
-
+        
+        
     });
-
-
+    
+    
         
     </script>
 
