@@ -70,13 +70,14 @@
 
 <script>
     let count = 0;
-    let a = document.getElementById("answer")
     /* 제출버튼 눌렀을때 카운트가1 그리고 정답이면 성공알람, 카운트가 3 못맞추면 멍청아 */
     document.getElementById("send-answer").addEventListener("click", function(){
+        let a = document.getElementById("answer").value
         count = count+1;
         console.log(count); 
-        
-        if(a.value==='1335'){
+        console.log(a);
+
+        if(a ==='1335'){
             
                 alert('성공');
             
