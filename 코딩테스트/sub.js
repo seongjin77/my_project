@@ -11,11 +11,17 @@ let user = {
 
 /* for loop를 통한 방법 */
 
-let admin ={}; // 아예 새로운 객체를 생성한다. let admin = user; 이렇게 쓰면 주소값을 그대로 복사하는거임
+// let admin ={}; // 아예 새로운 객체를 생성한다. let admin = user; 이렇게 쓰면 주소값을 그대로 복사하는거임
 
-for (let key in user){
-    admin[key] = user[key];
-};
+// for (let key in user){
+//     admin[key] = user[key];
+// };
 
+/* Object.assing() 함수를 사용해서 복사 */
 
+let admin = Object.assign({}, user);
+
+admin.name= 'kim';
+console.log(admin.name);
+console.log(user.name);
 
