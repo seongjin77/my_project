@@ -28,3 +28,27 @@ function recursive (num){
 }
 
 console.log(recursive(4));
+
+/////////////////
+// 콜백함수: 콜백함수란 다른 함수의 매개변수로 전달되어 수행되어지는 함수
+// 고차함수: 매개변수를 통해 함수를 받아 호출하는 함수
+
+function add(x,y){ 
+    return x + y;
+}
+
+function calculate(callback,x,y){
+     return callback(x,y);
+    }
+
+console.log(calculate(add,7,10));
+
+// 매개변수가 원시타입인지 객체타입인지 생각해야한다.
+
+/////////////큰 값 도출하는 함수 생성
+function MAX(x,y){
+    if(x>y) return x;
+    else return y;
+}
+
+console.log(MAX(7,10));
