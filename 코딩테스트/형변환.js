@@ -16,3 +16,8 @@ console.log(true == 1) // true를 1로 암묵적 타입 변환 후 비교
 console.log(false != 123) // 0 이 아닌 숫자는 true이므로 != not연산자에 의하면 결과는 트루
 console.log(true === 1); // 암묵적 타입변환이 일어나지 않아서 결과는 false
 
+let result = kkk (){
+                    console.log('함수가 잘 작동합니다');
+                            }
+
+result();

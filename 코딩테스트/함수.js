@@ -50,5 +50,3 @@ function MAX(x,y){
     if(x>y) return x;
     else return y;
 }
-
-console.log(MAX(7,10));

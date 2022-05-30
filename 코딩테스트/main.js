@@ -11,3 +11,27 @@ let name = 'seongjin',
     msg = 'hello';
 
     console.log(age);
+
+////// 배열에 함수 저장 // 호출: list[2]();
+let list = [
+'kim',
+28, 
+function keke (){
+    console.log('hello');
+    }
+];
+//////// obj.kkk();
+let obj = {
+   name: 'kim',
+   age: 28,
+   kkk(){
+        console.log('hello');
+   } 
+};
+/////
+function sj (){
+    console.log('hello');
+}
+
+obj.kkk()
+list[2]();
