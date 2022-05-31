@@ -29,9 +29,21 @@ let obj = {
    } 
 };
 /////
+let objj = {
+
+    x : function (){
+        console.log('hello 작동합니다');
+    }
+
+
+
+};
+
+///
 function sj (){
     console.log('hello');
 }
 
 obj.kkk()
 list[2]();
+objj.x();
