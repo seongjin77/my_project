@@ -15,3 +15,48 @@
 
 
 */
+
+// forEach
+
+let nums = [1, 2, 3];
+
+for(let i = 0; i<nums.length; i++) {
+    console.log(nums[i]);
+}
+////// 둘이 결과값 같음
+nums.forEach( i => {
+    console.log(i);
+});
+
+// for loop
+let nums2 = [1, 2, 3, 4, 5];
+let results = [];
+
+for(let i = 0; i < nums2.length; i++){
+    results.push(nums2[i]*2);
+}
+console.log(results);
+
+/// map() 사용
+let results_map = nums2.map(function(w){
+    return w * 2;
+})
+console.log(results_map);
+
+/// find() 함수 단하나의 값만 반환 /// filter는 두개 이상 반환
+let user = [
+    {name: 'kim', age: 17, job: false},
+    {name: 'mmm', age: 27, job: false},
+    {name: 'eee', age: 7, job: true}
+];
+
+let results_find = user.find(function(con){
+    return con.job === false;
+});
+
+console.log(results_find);
+// reduce() 요소 별 함수 수행 누적 결과 값 반환.
+
+let nnn = [1, 2, 3, 4, 5];
+let call_count = 0;
+
