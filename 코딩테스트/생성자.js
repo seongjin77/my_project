@@ -11,6 +11,18 @@ let result_2 = new User('chacha');
 
 console.log(result);
 console.log(result_2);
+//// map 사용법 반복문과 잘 사용함
+
+let map = new Map();
+
+map.set('name','kim');
+map.set(123, 456);
+map.set(true, 'success');
+
+console.log(map.get(123));
+console.log(map.get('name'));
+console.log(map.get(true));
+console.log(map.size);
 
 
 
