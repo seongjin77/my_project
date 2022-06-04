@@ -4,11 +4,14 @@
 function answer(withdraw, total) {
   let result;
 
-  // 코드 구현 시작 영역
+  // 5의 배수 금액만 취급한다
+  // 인출할때 0.5만원 즉 오천원의 수수료가 필요하다
+  // 인출할 금액과 계좌의 총 금액을 입력받아, 계좌의 남은 금액을 반환하는 함수를 작성하라
 
-  // …
-
-  // 코드 구현 종료 영역
+  if(withdraw%5===0){
+    result = total - withdraw - 0.5;
+  }
+  
 
   return result;
 }

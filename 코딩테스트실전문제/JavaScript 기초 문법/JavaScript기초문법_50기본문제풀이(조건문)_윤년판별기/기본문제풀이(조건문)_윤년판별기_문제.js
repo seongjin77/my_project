@@ -4,11 +4,14 @@
 function answer(year) {
   let result;
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
+  // 4의 배수이고 100의 배수가 아닐때
+  // 400의 배수일때
+  if((year%4===0 && year%100!==0) || year%400===0){
+    result = true;
+  }
+  else {
+    result = false;
+  }
 
   return result;
 }
