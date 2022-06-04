@@ -4,16 +4,14 @@
 function answer(x, y) {
   let result = [];
 
-  if(x<y){
-    
-    for( let i=x; i<=y; i++ ) {
-      result.push(i);
-    }
-    
-  } else {
-    for(let i=y; i<=x; i++ ) {
-      result.push(i);
-    }
+  if(x>y){
+    let t = x;
+    x = y;
+    y = t;
+  } 
+
+  for(let i =x; i<=y; i++) {
+    result.push(i);
   }
 
   return result;

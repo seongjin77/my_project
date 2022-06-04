@@ -3,12 +3,15 @@
 /* user code */
 function answer(score) {
   let average = 0;
+ // 반 인원만큼 숫자를 더한다
+ // 더한 숫자 합을 나눠 평균을 구한다
+ // 소수점 두째자리까지 표현한다
+ for(let i =0; i < score.length; i++) {
+   average += score[i];
+ }
+  average /= score.length;
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
+  average=average.toFixed(2);
 
   return average;
 }
