@@ -4,13 +4,23 @@
 function answer(employee) {
   let employee_id;
 
-  // 코드 구현 시작 영역
+  let max = 0;
 
-  // …
+  // 숫자를 비교해서 큰 값을 산출하라
+  // 숫자 하나씩 받아온다
+  // 그거에 인덱스 값을 산출해라
+  for(let i =0; i< employee.length; i++) {
 
-  // 코드 구현 종료 영역
+    if(employee[i]>max){
+      max = employee[i];
+      employee_id = i+1;
+    }
 
-  return average;
+  };// for끝
+
+
+
+  return employee_id;
 }
 
 /* main code */
