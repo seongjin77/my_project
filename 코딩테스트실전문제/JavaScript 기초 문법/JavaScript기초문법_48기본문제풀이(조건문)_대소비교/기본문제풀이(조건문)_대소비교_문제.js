@@ -4,11 +4,17 @@
 function answer(x, y) {
   let result = "";
 
-  // 코드 구현 시작 영역
+  if(x>y){
+    result = '>';
+  } 
+  else if(x<y){
+    result = '<';
+  }
 
-  // …
-
-  // 코드 구현 종료 영역
+  else {
+    result = '=';
+  }
+  
 
   return result;
 }
