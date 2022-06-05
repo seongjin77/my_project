@@ -4,8 +4,13 @@
 function answer(arr) {
   let new_arr = [];
 
-  console.log(new Set(arr));
- 
+  // new Set(arr).forEach(function(item){
+  //     new_arr.push(item);
+  // })
+
+  new_arr = Array.from(new Set(arr));
+  
+
 
   return new_arr;
 }

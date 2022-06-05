@@ -3,13 +3,16 @@
 /* user code */
 function answer(arr) {
   let max;
+  // let num = arr[0]
+  // for(let i =0; i < arr.length; i++) {
+    
+  //   if(arr[i] > num) {
+  //     num = arr[i];
+  //   } 
+  //   max = num;
+  // }
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
-
+  max = Math.max(arr);
   return max;
 }
 
