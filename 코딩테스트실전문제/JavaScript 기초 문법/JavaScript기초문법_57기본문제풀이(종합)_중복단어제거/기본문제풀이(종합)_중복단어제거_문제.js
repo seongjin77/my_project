@@ -4,11 +4,8 @@
 function answer(arr) {
   let new_arr = [];
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
+  console.log(new Set(arr));
+ 
 
   return new_arr;
 }
