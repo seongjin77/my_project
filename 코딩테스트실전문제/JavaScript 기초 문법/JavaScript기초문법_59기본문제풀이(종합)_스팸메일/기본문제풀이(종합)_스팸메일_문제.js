@@ -4,11 +4,7 @@
 function answer(str) {
   let spam_flag;
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
+ spam_flag = str.toLowerCase().includes('advert');
 
   return spam_flag;
 }

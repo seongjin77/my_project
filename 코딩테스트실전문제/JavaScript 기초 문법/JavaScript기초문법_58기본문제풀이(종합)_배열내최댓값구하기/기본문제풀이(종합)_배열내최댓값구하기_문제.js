@@ -12,7 +12,7 @@ function answer(arr) {
   //   max = num;
   // }
 
-  max = Math.max(arr);
+  max = Math.max.apply(null,arr);
   return max;
 }
 
