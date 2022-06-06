@@ -4,11 +4,11 @@
 function answer(a, d, n) {
   let index = -1;
 
-  // 코드 구현 시작 영역
+  for( let i= 1; ; i++){
+    num = a + d * (i -1);
 
-  // …
-
-  // 코드 구현 종료 영역
+    if ( num > n) break;
+  }
 
   return index;
 }
