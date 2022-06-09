@@ -1,8 +1,5 @@
-const person = {
 
 
 
-
-
-    
-}
+let party;
+console.log(party);
