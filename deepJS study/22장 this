@@ -12,7 +12,7 @@ this는 어디서든지 참조 가능. 전역 또는 일반함수 내부에서�
 
 화살표 함수 내부의 this는 상위 스코프의 this를 가리킨다.
 
-함수 호출시 function.prototype의 메서드 apply / call / bind를 사용해 this를 지정해줄 수 있다.
+'함수 호출시 function.prototype의 메서드 apply / call / bind를 사용해 this를 지정해줄 수 있다.'
 
 
 ----------------------------------------------------------------
