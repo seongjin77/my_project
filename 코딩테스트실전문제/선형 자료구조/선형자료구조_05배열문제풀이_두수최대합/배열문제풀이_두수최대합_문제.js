@@ -4,11 +4,25 @@
 function answer(nums) {
   let result = [];
 
-  // 코드 구현 시작 영역
+  // 1. result에 기준을 만들어 둔다.
+  result = nums[0] > nums[1]? [nums[0], nums[1]] : [nums[1], nums[0]];
+  //1, 제일 큰 값을 찾아서 빼낸다.
 
-  // …
+  for(let i = 1; i < nums.length; i++) {
+    if(nums[i] > result[0]){
+        result[1] = result[0]
+        result[0] = nums[i];
+    }
+    else if (result[1]< nums[i]){
+        result[1] = nums[i];
+    }
+  }
+  
 
-  // 코드 구현 종료 영역
+
+
+  //2. 두번째로 큰 값을 찾아서 빼낸다.
+  
 
   return result;
 }

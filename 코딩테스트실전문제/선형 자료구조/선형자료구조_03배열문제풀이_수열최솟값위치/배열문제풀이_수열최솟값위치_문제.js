@@ -3,26 +3,24 @@
 /* user code */
 function answer(nums) {
   let result = [];
-
+  
   //1. 최솟값을 걸러내라
 
-  // let min = Math.min.apply(null,nums); 작동됨
-  for(let i=0; i<nums.length; i++) {
+  let min = Number.MAX_SAFE_INTEGER;
 
-    if(!minnum){
-     let minnum = nums[i];
-    }
-
-    if(minnum>nums[i]){
-      minnum = nums[i];
-    }
-
-
+  // let min = Math.min.apply(null,nums);
+  for(let i = 0; i < nums.length; i++) {
+      if(min > nums[i]){
+        min = nums[i];
+      }
   }
-
-
+  console.log(min)
   //2. 찾아낸 최솟값을 메소드로 걸러내라
-  
+  for(let i =0; i < nums.length; i++){
+    
+    if(min=== nums[i]) result.push(i);
+    
+  }
 
   return result;
 }

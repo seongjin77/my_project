@@ -4,11 +4,15 @@
 function answer(chess) {
   let result = [];
 
-  // 코드 구현 시작 영역
+  // 1. 각 인덱스별로 정해진 숫자 개수
+  let standard = [1, 1, 2, 2, 2, 8];
 
-  // …
-
-  // 코드 구현 종료 영역
+  // 2. 각 인덱스 별로 정해진 숫자와 비교해서 얼마만큼 부족한지 더 많은지 비교해서 배열에 업데이트
+  let count = 0;
+  for(let i =0; i<chess.length; i++){
+    result[count] = standard[i] - chess[i];
+      count++
+  } 
 
   return result;
 }
