@@ -4,11 +4,19 @@
 function answer(dwarf) {
   let result = [];
 
-  // 코드 구현 시작 영역
+  //1. 총합을 구해서 -100을 하면 남는 값이 두 난장이의 합이다
+  let sum = dwarf.reduce((acc, cur)=> acc + cur)
 
-  // …
+  sum -= 100;
 
-  // 코드 구현 종료 영역
+  //2. for문을 돌려 if만약 두 값이 합과 같으면 두 요소를 출력한다.
+  for(let i=0; i<dwarf.length; i++) {
+    for(let j =i+1; j<dwarf.length; j++) {
+      if (dwarf[i]+ dwarf[j]===sum){
+        result = [dwarf[i], dwarf[j]];
+      }
+    }
+  }
 
   return result;
 }
