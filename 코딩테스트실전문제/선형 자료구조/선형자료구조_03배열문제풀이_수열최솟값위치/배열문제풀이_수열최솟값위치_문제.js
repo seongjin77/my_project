@@ -4,11 +4,25 @@
 function answer(nums) {
   let result = [];
 
-  // 코드 구현 시작 영역
+  //1. 최솟값을 걸러내라
 
-  // …
+  // let min = Math.min.apply(null,nums); 작동됨
+  for(let i=0; i<nums.length; i++) {
 
-  // 코드 구현 종료 영역
+    if(!minnum){
+     let minnum = nums[i];
+    }
+
+    if(minnum>nums[i]){
+      minnum = nums[i];
+    }
+
+
+  }
+
+
+  //2. 찾아낸 최솟값을 메소드로 걸러내라
+  
 
   return result;
 }
