@@ -8,11 +8,19 @@ function answer(a, b, c) {
   num = [a, b, c];
   num.sort((x, y) => x - y);
 
-  // 코드 구현 시작 영역
+  //1. ge d => 등차값 찾기
+  let d = 0;
+  for(let i=1; i<num.length; i++) {
+    d += num[i] - num[i-1];
+  }
+    d/= num.length; // 3d만큼 있으니깐 3으로 나눠주기
 
-  // …
+  // 2. 빈 index 찾기
 
-  // 코드 구현 종료 영역
+  let index = num[2]-num[1] > num[1] - num[0] ? 2 : 1;
+
+  // 3. 이전 값 + d
+  number = num[0] + d * index;
 
   return number;
 }

@@ -5,15 +5,15 @@ function permutation(arr, s, r){
     
     if(s === r) {
         count++;
-        console.log(arr);
+        console.log('이건 뭐?', arr);
         return;
     }
     for( let i = s; i < arr.length; i++){
         [arr[s],arr[i]] = [arr[i],arr[s]] ;
-
+        console.log('위에 것 :'+[arr[s],arr[i]] );
         permutation(arr, s + 1 , r);/// 재귀함수
         [arr[s],arr[i]] = [arr[i],arr[s]] ;
-        
+        console.log('아래 것 :'+[arr[s],arr[i]] );
     }
 };
 
