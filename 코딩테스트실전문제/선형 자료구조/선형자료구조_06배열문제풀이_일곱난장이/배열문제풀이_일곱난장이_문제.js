@@ -9,13 +9,22 @@ function answer(dwarf) {
 
   sum -= 100;
 
+  let faker =[];
   //2. for문을 돌려 if만약 두 값이 합과 같으면 두 요소를 출력한다.
   for(let i=0; i<dwarf.length; i++) {
     for(let j =i+1; j<dwarf.length; j++) {
       if (dwarf[i]+ dwarf[j]===sum){
-        result = [dwarf[i], dwarf[j]];
+        faker[0] = i;
+        faker[1] = j;
+        break;
       }
     }
+    if(faker.length!==0) break;
+  }//for 문 끝
+
+  //3. faker 두명 제외하고 나머지 배열값을 return한다.
+  for(let i = 0; i< dwarf.length; i++){
+      if(faker[0]!==i && faker[1]!==i) result.push(dwarf[i]);
   }
 
   return result;
