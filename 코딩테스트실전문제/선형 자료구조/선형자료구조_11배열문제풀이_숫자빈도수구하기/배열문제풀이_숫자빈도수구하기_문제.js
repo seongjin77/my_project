@@ -3,13 +3,16 @@
 /* user code */
 function answer(s, e) {
   let result = [];
-
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
-
+  let count =[];
+ //1. s숫자부터 1씩올려서 e까지 같아지면 멈추고 배열에 넣어줌.
+  while(s<=e){
+    count.push(s);
+    s++;
+  }
+ //2. 만들어진 모든 배열의 숫자를 문자열로 변경시킴.
+ result = count.join();
+ //3. 모든 문자열중에서 0부터 9까지 각각 몇개인지 세어줌. 각각의 수만큼 결과배열에 차례대로 푸시
+  
   return result;
 }
 
