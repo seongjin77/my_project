@@ -3,13 +3,19 @@
 /* user code */
 function answer(blocks) {
   let result = 0;
+  let sum = 0;
+  //1. 일단 배열 수를 다 더하고 길이만큼 나눠주어 하나당 몇개의 벽돌이 되어야 하는지 확인한다.
+  for(let i=0; i< blocks.length; i++){
 
-  // 코드 구현 시작 영역
-
-  // …
-
-  // 코드 구현 종료 영역
-
+  sum += blocks[i];
+    }
+  sum /= blocks.length;
+  //2. 나눠주고 난 수와 배열을 돌면서 각 원소마다 빼주어 양수가 나올경우 그 수를 더한다.
+    for(let i=0; i< blocks.length; i++){
+      if(blocks[i]-sum>0){
+        result += blocks[i]-sum;
+      }
+    }
   return result;
 }
 

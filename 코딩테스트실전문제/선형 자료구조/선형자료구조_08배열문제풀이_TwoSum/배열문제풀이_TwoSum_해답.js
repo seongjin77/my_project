@@ -9,7 +9,7 @@ function answer(nums, target) {
   // target - nums[i] = nums[j];
   for (let i = 0; i < nums.length; i++) {
     if (map[target - nums[i]] != undefined) { // map[num[j]] 맵객체의 키 값이 정의되었다면
-      return [map[target - nums[i]], i];  // map[키]에 
+      return [map[target - nums[i]], i];  // map[키]에 있엇던 값을 불러옴.
     }
 
     map[nums[i]] = i;

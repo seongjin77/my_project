@@ -4,11 +4,15 @@
 function answer(mark) {
   let result = 0;
 
-  // 코드 구현 시작 영역
+  let score = 0;
+ //1. for문을 돌면서 1일때는 1점, 연속한 count만큼 점수 추가
+ for(let i=0; i<mark.length; i++) {
+    if(mark[i]===1) {
+        result += ++score;
+    } else score =0;
+    
+ }
 
-  // …
-
-  // 코드 구현 종료 영역
 
   return result;
 }
