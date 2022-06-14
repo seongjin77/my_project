@@ -5,7 +5,7 @@ function permutation(arr, s, r){
     
     if(s === r) {
         count++;
-        console.log('이건 뭐?', arr);
+        console.log('탈출', arr);
         return;
     }
     for( let i = s; i < arr.length; i++){

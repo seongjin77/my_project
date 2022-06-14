@@ -6,12 +6,14 @@ function answer(nums, target) {
 
   // target - nums[i] = nums[j]
   // for 2중 O(n^2) -> for 1중 O(n)
+  // target - nums[i] = nums[j];
   for (let i = 0; i < nums.length; i++) {
-    if (map[target - nums[i]] != undefined) {
-      return [map[target - nums[i]], i];
+    if (map[target - nums[i]] != undefined) { // map[num[j]] 맵객체의 키 값이 정의되었다면
+      return [map[target - nums[i]], i];  // map[키]에 
     }
 
     map[nums[i]] = i;
+    console.log(map);
   }
 
   return [];

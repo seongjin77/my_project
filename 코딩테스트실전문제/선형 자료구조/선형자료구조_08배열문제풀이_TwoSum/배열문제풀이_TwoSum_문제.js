@@ -2,9 +2,21 @@
 
 /* user code */
 function answer(nums, target) {
-  // 코드 구현 시작 영역
-  // …
-  // 코드 구현 종료 영역
+  
+  //1. 첫번째 배열을 돌면서 만약  target과 숫자가 같으면 그 숫자 추출하기
+    for(let i=0; i<nums.length; i++) {
+      for(let j= i+1; j<nums.length; j++) {
+        if(nums[i]+ nums[j]=== target){
+          return [ i , j]
+        }
+      }
+    
+    }
+
+
+  //2. 그 숫자를 오름차순으로 반환.
+
+
 }
 
 /* main code */
