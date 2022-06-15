@@ -47,6 +47,8 @@ LinkedList.prototype.append = function (value) {
 
 let ll = new LinkedList();
 
+console.log('내가찾 :'+ll);
+
 ll.append(1);
 ll.append(10);
 ll.append(100);

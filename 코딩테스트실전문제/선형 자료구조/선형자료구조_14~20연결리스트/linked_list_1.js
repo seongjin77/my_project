@@ -20,6 +20,8 @@ LinkedList.prototype.isEmpty = function () {
   return this.length === 0;
 };
 
+// Test 코드
+
 let ll = new LinkedList();
 console.log(ll);
 
