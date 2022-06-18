@@ -31,27 +31,29 @@ LinkedList.prototype.printNode = function () {
 // append(): 연결 리스트 가장 끝에 노드 추가
 LinkedList.prototype.append = function (value) {
   let node = new Node(value),
-    current = this.head;
+    현재노드 = this.head;
 
   if (this.head === null) {
     this.head = node;
   } else {
-    while (current.next != null) {
-      current = current.next;
+    while (현재노드.next != null) {
+      현재노드 = 현재노드.next;
     }
-    current.next = node;
+    현재노드.next = node;
   }
 
   this.length++;
 };
 
-let ll = new LinkedList();
+let 리스트 = new LinkedList();
 
-console.log('내가찾 :'+ll);
+console.log('내가찾 :'+리스트);
 
-ll.append(1);
-ll.append(10);
-ll.append(100);
+리스트.append(1);
+리스트.printNode()
+리스트.append(10);
+리스트.printNode()
+리스트.append(100);
 
-ll.printNode();
-console.log(ll.size());
+리스트.printNode();
+console.log(리스트.size());
