@@ -46,15 +46,15 @@ LinkedList.prototype.append = function (value) {
 };
 
 // insert(): position 위치에 노드 추가
-LinkedList.prototype.insert = function (value, position = 0) {
-  if (position < 0 || position > this.length) {
+LinkedList.prototype.insert = function (value, position = 0) { // 매개변수 기본값 설정 할 수 있음 0으로
+  if (position < 0 || position > this.length) {   // 위치에 문제가 있으면 리턴 false가 반환
     return false;
   }
 
-  let node = new Node(value),
-    current = this.head,
-    index = 0,
-    prev;
+  let node = new Node(value),     
+    current = this.head,      // node의 앞 위치를 찾는데 쓰임
+    index = 0,      // 내가 몇 번째 위치에 있는지 저장할 변수
+    prev;     // 이전 node값을 저장할 변수
 
   if (position === 0) {
     node.next = current;
