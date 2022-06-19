@@ -57,12 +57,14 @@ LinkedList.prototype.insert = function (value, position = 0) { // 매개변수 �
     prev;     // 이전 node값을 저장할 변수
 
   if (position === 0) {
-    node.next = current;
+    node.next = current;   // 현재 head 부분이 노드 다음을 가르키고 지금의 헤드는 노드가 대신한다.
     this.head = node;
   } else {
-    while (index++ < position) {
+    while (index++ < position) {    // 인덱스를 증가시키면서 포지션 값만큼 
       prev = current;
+      
       current = current.next;
+      
     }
 
     node.next = current;
@@ -104,9 +106,9 @@ let ll = new LinkedList();
 ll.insert(1);
 ll.insert(10);
 ll.insert(100);
-ll.printNode();
+// ll.printNode();
 
 ll.insert(2, 1);
 ll.insert(3, 3);
 ll.printNode();
-console.log(ll.size());
+// console.log(ll.size());
