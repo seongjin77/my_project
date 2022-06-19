@@ -112,3 +112,8 @@ ll.insert(2, 1);
 ll.insert(3, 3);
 ll.printNode();
 // console.log(ll.size());
+
+
+//처음에 head -> null이라는 객체르 만듦
+// 그다음 노드의 null값이 this.head의 null값을 가르키게 변함
+// 그 다음 10데이터 노드는 head가 되고 노드.next는 이전의 head를 가르킴
