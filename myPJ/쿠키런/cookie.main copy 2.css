@@ -1,0 +1,352 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+/* 기본리셋하고 시작 */
+html, body{
+    margin: 0;
+    padding: 0;
+
+}
+h1,h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+/* 스크롤바 디자인 및 나타내기 */
+.scbar::-webkit-scrollbar{
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb{
+    background-color: #666;
+    border-radius: 6px;
+}
+.scarbar::-webkit-scrollbar-track{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+/* 페이지 구분선 임시표시 */
+/* body *{
+    outline: 1px dashed rgb(197, 181, 41)
+} */
+/* 배경화면 이미지 */
+body{
+    position: relative;
+    background-image: url(./imagecookie/배경화면.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/************* 상단영역 ***********/
+.top{
+    height: 130px;
+    background-color: rgba(255, 255, 255, 0.527);
+}
+/* 로고 이미지 크기 비율에 맞게 조절 */
+.imglo{
+    height:100px;
+}
+/* 로고 이미지 센터로 */
+#logo{
+    padding-top: 10px;
+    text-align: center;
+}
+/* 상단 캐릭터 설정 */
+.tlo{
+    height: 120px;
+    display: block;
+}
+/* 상단 캐릭터 부모박스 */
+.tca{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* 상단캐릭터 개별박스 공통 */
+.tca>div {
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    font-size: 27px;
+    z-index: 1;
+}
+
+.tca>div:nth-child(3){
+    margin-left: 17%;
+}
+/* 가상요소로 줄 내려오기 */
+.tca>div::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 113px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    margin-top: 17px;
+    background-color: rgba(255, 255, 255, 0.527);
+    transition: height .4s ease-in-out;
+}
+.tca>div:nth-child(1):hover::after{
+    height: 120px;
+}
+.tca>div:nth-child(2):hover::after{
+    height: 140px;
+}
+.tca>div:nth-child(3):hover::after{
+    height: 90px;
+}
+.tca>div:nth-child(4):hover::after{
+    height: 180px;
+}
+
+/* 상단캐릭터 개별박스 공통 배경 */
+.tcb{
+   
+    margin-top: 2px;
+    padding: 0;
+    line-height: 2;
+
+}
+
+    
+/* 상단캐릭터 개별박스 소메뉴 설정 */
+.tcb>li{
+    
+    padding: 0px;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 20px;
+    
+}
+.tcb>li>a{
+    text-decoration: none;
+    color: black;
+}
+.tcb>li>a:hover{
+    color: white
+
+}
+
+
+/* 개별 메뉴 내려오기 */
+.tcb{
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+/* 마우스 오버시 소메뉴 나오기 */
+/* 첫번쨰 */
+.tca>div:first-child:hover .tcb{
+    height: 117px;
+}
+/* 두번쨰 */
+.tca>div:nth-child(2):hover .tcb{
+    height: 146px;
+}
+/* 세번쨰 */
+.tca>div:nth-child(3):hover .tcb{
+    height: 88px;
+}   
+/* 첫번쨰 */
+.tca>div:nth-child(4):hover .tcb{
+    height: 180px;
+}   
+/*************** 메인영역 *************/
+.cont{
+    height: 800px;
+    overflow: hidden;
+    padding-bottom: 250px;
+}
+/* 캐릭터 부모박스 크기 */
+#cbx {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+#cbx::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* 캐릭터 공통박스 크기 */
+.cat {
+    position: relative;
+    width: 20%;
+    float: left;
+    margin:0 2.5%; 
+}
+/* 캐릭터 이미지박스 */
+.ci{
+    transition: margin-top .6s ease-out;
+    border-radius: 20%;
+    overflow: hidden;
+    box-shadow: 0 0 20px 1px black;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+.cat:hover .ci{
+    margin-top:-100px;
+}
+.ci>img {
+    text-align: center;
+    width: 100%;
+    
+}
+/* 캐릭터 이름박스 */
+.ci span {
+    display: block;
+    text-align: center;
+}
+.ci>span>img {
+    width: 50%;
+}
+.cat:hover .ci span img{
+    display : none;
+}
+.cd {
+    background:url(./imagecookie/eachBG.jpg) no-repeat center/cover;
+    height: 0px;
+    overflow-y: scroll;
+    /* 트렌지션 :속성 시간 이징 지연시간 */
+    transition: height .6s ease-in-out;
+    border-radius:20px;
+}
+.cat:hover .cd{
+    height: 300px;
+}
+.cd h3 {
+    font-size: 2vw;
+    padding: 5px 10px 0px;
+    font-family: 'Jua', sans-serif;
+    color: rgb(85, 46, 46);
+    white-space: nowrap;
+
+}
+.cd p {
+    font-size: 1.4vw;
+    line-height: 2;
+    padding: 10px;
+    text-align: justify;
+    font-family: 'Jua', sans-serif;
+
+}
+
+/* 캐릭터 박스 위 등급 이미지 표시 */
+.cat>.rank{
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    font-family: 'Stylish', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+    text-shadow: 2px 0 10px rgb(203, 216, 18);
+    opacity: 1;
+
+    transition: all .5s ease-in-out;
+}
+ /* #cbx>.cat:nth-of-type(1)>.rank{
+    left: -37%;
+}
+#cbx>.cat:nth-of-type(2)>.rank{
+    left: -13%;
+}
+#cbx>.cat:nth-child(3)>.rank{
+    left: -50%;
+}
+*/
+
+/* .cat>div:last-child{
+    left: -4%;
+    top: -50px;
+}  
+*/
+
+.cat>div:nth-child(3){
+    left:-4%;
+    top:-20%;
+}
+/****************** ***************/
+.cat:nth-of-type(1):hover .rank{
+    left: -4%;
+    top: -35%;
+    opacity: 1;
+}
+
+/* .cat:hover #cbx>.rank:nth-of-type(1){}
+ 이것은 틀린 방법이다 */
+ .cat:hover:nth-child(2)>.rank{
+    left: -4%;
+    top: -35%;
+    opacity: 1;
+}
+
+.cat:hover #rank3{
+    left: -4%;
+    top: -35%;
+    opacity: 1;
+}
+.cat:hover #rank4{
+    left: -4%;
+    top: -35%;
+    opacity: 1;
+}
+
+
+
+/***************** 하단영역 **************/
+.info{
+    position: absolute;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.466);
+    width: 100%;
+    bottom: 0;
+}
+.blink{
+    margin: 0 auto;
+    width:402px;
+    height: 80px;
+}
+
+/* 하단 리스트 요소 설정 */
+.blink>ol{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.blink>ol>li{
+    float: left;
+    padding: 25px;
+}
+
+.blink>ol>li::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.blink>ol>li>a>img{
+    height: 50px;
+}
+
+/* 주소설정 */
+.addr{
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 5px;
+    font-style: normal;
+    text-align: center;
+    width: 40%;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
