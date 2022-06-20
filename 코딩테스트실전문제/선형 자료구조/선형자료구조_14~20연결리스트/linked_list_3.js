@@ -52,12 +52,12 @@ LinkedList.prototype.insert = function (value, position = 0) { // 매개변수 �
   }
 
   let node = new Node(value),     
-    current = this.head,      // node의 앞 위치를 찾는데 쓰임
+    current = this.head,      // node의 앞 위치를 찾는데 쓰임 현재는 null.
     index = 0,      // 내가 몇 번째 위치에 있는지 저장할 변수
     prev;     // 이전 node값을 저장할 변수
 
   if (position === 0) {
-    node.next = current;   // 현재 head 부분이 노드 다음을 가르키고 지금의 헤드는 노드가 대신한다.
+    node.next = current;   // 현재 head 부분이 노드 다음을 가르키고 지금의 헤드는 노드가 대신한다. 
     this.head = node;
   } else {
     while (index++ < position) {    // 인덱스를 증가시키면서 포지션 값만큼 
