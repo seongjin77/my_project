@@ -4,3 +4,11 @@ let result;
 result =  arr.reduce((acc, cur) => acc + cur );
 
 console.log(result);
+
+
+
+const apple = function (){
+    console.log('사과');
+}
+
+apple()
