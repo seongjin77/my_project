@@ -11,11 +11,21 @@ function LinkedList() {
 function answer(nums) {
   let ll = new LinkedList();
 
-  // 코드 구현 시작 영역
+  //1. Train 객체를 nums 수만큼 만들고, next를 이용해서 열차 간 연결
+  
+  //2. 가장 첫번쨰 Train 객체는 this.head로 연결
+  let current, prev;
+  for(let i=0; i<nums.length; i++){
+    current = new Train(nums[i]);
 
-  // …
+    if(i === 0){
+      ll.head = current;
+    }else{
+      prev.next = current;
+    }
+    prev = current;
+  }
 
-  // 코드 구현 종료 영역
 
   return ll;
 }
