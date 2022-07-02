@@ -3,25 +3,14 @@ document object model (DOM)은 HTML 문서의 전반적 속성을 나타내는 �
 document는 DOM 트리의 최상위 객체이다.
 브라우저가 웹문서 html을 읽어 DOM객체로 변경하면 자바스크립트 언어가 DOM객체에 접근 할수 있게 된다.
 DOM 객체: 브라우저 안에 출력될 HTML 창에 대한 객체 / DOM 트리의 루트는 document 객체
+브라우저는 HTML 정보가 들어있는 document라는 객체를 자바스크립트에게 전달해주는 것이다.
 
-getElementById()이란
-element = document.getElementById(id);
-id를 통해 엘리먼트를 반환한다. 만약 document에 구체적인 ID의 엘리먼트가 없다면 null을 반환한다.
+document는 HTML이 js파일을 load하기 때문에 존재하는 것이다. 그 다음 브라우저가 document에 접근할 수 있게 해주는 것이다.
 
-querySelector()이란
-element = document.querySelector(selectors);
-selector의 구체적인 그룹과 일치하는 document안 첫번째 엘리먼트를 반환한다. 일치하는게 없으면 null반환한다.
-
-​
-출력되는 결과는 거의 같다. 그러나,getElementsByClassName은 HTMLCollection에 리턴이 되고 querySelectorAll은 NodeList에 리턴이 된다.
-
-​
-
-잠깐, HTMLcollection와 NodeList 이란??
-간단하게 설명하자면 둘 다 배열과 같이 각 항목을 접근하기 위한 인덱스를 제공한다고 한다. HTMLCollection의 항목은 name, id 속성으로도 접근이 가능하지만, NodeList의 항목은 인덱스 번호로만 접근이 가능하다.
-
-만약 더 구체적인 엘리먼트를 선택하고 싶다면, querySelector그리고 querySelectorAll을 사용하자!
-하지만 위 둘에 비해 getElementByID가 더 빠르고 더 잘 지원이 되어 많은 개발자들이 getElementByID를 쓴다고 한다.
-
-추가!!!
 querySelector는 css문법을 쓸 수 있기 때문에 더 복잡한 코드에서 사용할때 좋다.
+
+자바스크립트에서 스타일 속성을 바꿀 수 있다.
+
+event를 찾을때 공식문서를 보는 방법도 있지만 console.dir를 사용하면 해당 요소의 이벤트들을 볼 수 있다. 앞에 on 붙은것이 사용할 수 있는 이벤트
+onEventname = ~~~ 처럼 addEventListener작동한다. 하지만 removeEventListener를 사용할 수 없어서 추천하지 않는다.
+
