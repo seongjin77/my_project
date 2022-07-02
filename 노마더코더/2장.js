@@ -1,30 +1,16 @@
-const title = document.querySelector('.hello h1');
-title.innerText='Hello!'
+const h1 = document.querySelector('h1');
+h1.innerText='Hello!'
 
 
 function hand(){
-    title.style.color = 'blue';
-};
+    // const clickedClass = 'clicked';
+    // if(h1.classList.contains(clickedClass)) {
+    //     h1.classList.remove(clickedClass);
+    // }else{
+    //     h1.classList.add(clickedClass);
+    // }
+    h1.classList.toggle('clicked');
 
-function mouse(){
-    console.log('mouse is here')
 }
-function windowhandle(){
-    document.body.style.backgroundColor = 'tomato';
-}
-function copy(){
-    alert('copy');
-}
-function offline(){
-    alert('offline');
-}
-function online(){
-    alert('online');
-}
-title.addEventListener('click',hand );
-title.addEventListener('mouseenter',mouse );
 
-window.addEventListener('resize',windowhandle );
-window.addEventListener('copy',copy );
-window.addEventListener('offline',offline );
-window.addEventListener('online',online );
+h1.addEventListener('click',hand )

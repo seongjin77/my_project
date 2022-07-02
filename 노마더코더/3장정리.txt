@@ -14,3 +14,8 @@ querySelector는 css문법을 쓸 수 있기 때문에 더 복잡한 코드에�
 event를 찾을때 공식문서를 보는 방법도 있지만 console.dir를 사용하면 해당 요소의 이벤트들을 볼 수 있다. 앞에 on 붙은것이 사용할 수 있는 이벤트
 onEventname = ~~~ 처럼 addEventListener작동한다. 하지만 removeEventListener를 사용할 수 없어서 추천하지 않는다.
 
+
+
+실수를 줄이기 위해 변수를 활용하자.
+
+classList의 contain 기능을 처음 알았따
