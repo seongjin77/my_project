@@ -7,9 +7,23 @@ function btn(e){
     loginForm.classList.add('hidden');
     const username = logInput.value;
     localStorage.setItem('username', username);
+    paintGreetings(username)
+}
+
+loginForm.addEventListener('submit', btn);
+
+function paintGreetings(username){
     greeting.innerText = `Hello ${username}`;
     greeting.classList.remove('hidden');
 
 }
 
-loginForm.addEventListener('submit', btn);
+const saveUsername = localStorage.getItem('username');
+
+if(saveUsername === null) {
+    loginForm.classList.remove('hidden');
+    loginForm.addEventListener('submit', btn);
+}
+else{
+    paintGreetings(saveUsername);
+}
