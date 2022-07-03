@@ -1,16 +1,15 @@
-const h1 = document.querySelector('h1');
-h1.innerText='Hello!'
+const loginForm = document.querySelector('#login-form');
+const logInput = document.querySelector('#login-form input');
+const greeting = document.querySelector('#greeting');
 
-
-function hand(){
-    // const clickedClass = 'clicked';
-    // if(h1.classList.contains(clickedClass)) {
-    //     h1.classList.remove(clickedClass);
-    // }else{
-    //     h1.classList.add(clickedClass);
-    // }
-    h1.classList.toggle('clicked');
+function btn(e){
+    e.preventDefault();
+    loginForm.classList.add('hidden');
+    const username = logInput.value;
+    localStorage.setItem('username', username);
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove('hidden');
 
 }
 
-h1.addEventListener('click',hand )
+loginForm.addEventListener('submit', btn);

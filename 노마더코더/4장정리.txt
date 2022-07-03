@@ -1,0 +1,6 @@
+addEventListener의 함수 호출시 첫번째 arguments는 일어난 이벤트의 정보를 전달해준다.
+
+새로고침시 input내 데이터 값을 저장하기 위해서 사용.
+localStorage는 작은 db라고 생각하면 된다. setItem은 key와 values값으로 정보를 저장.
+.removeItem
+.getItem이 있음
