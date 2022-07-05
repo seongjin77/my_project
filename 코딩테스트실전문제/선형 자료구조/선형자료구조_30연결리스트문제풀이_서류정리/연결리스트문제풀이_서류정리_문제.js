@@ -9,7 +9,19 @@ function LinkedList() {
 }
 
 function answer(ll) {
- 
+  // let List = new linkedList();
+  let current = ll.head,
+      prev = null,
+      next;
+
+      while(current !== null){
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+      }
+
+      ll.head = prev;
   
 
   return ll;
