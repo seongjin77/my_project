@@ -18,4 +18,4 @@ onEventname = ~~~ 처럼 addEventListener작동한다. 하지만 removeEventList
 
 실수를 줄이기 위해 변수를 활용하자.
 
-classList의 contain 기능을 처음 알았따
+classList의 contain 기능을 처음 알았다
