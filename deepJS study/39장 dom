@@ -17,7 +17,40 @@ HTML 요소에 id 어트리뷰트를 부여하면 전역 변수가 암묵적으�
 --------------------------------
 
 HTMLCollection과 NodeList는 노드 객체 상태 변화를 실시간으로 반영하는 객체다.
-NodeList는 보통 정적인 상태를 유지하지만 경우에 따라 live로 동작 할 때가 있다.
+NodeList는 보통 정적인 상태를 유지하지만 경우에 따라 live로 동작 할 때가 있다.(childNode 프로퍼티 등)
 
-노드 객체의 노드 벨류 프로퍼티를 참조하면 노드 객체의 값을 반환. 노드 객체의 값은 텍스트 노드의 텍스트다 따라서 텍스트 노드가 아닌 노드 즉 문서 노드나 요소 노드의 노드 벨류 프로퍼티를 참조하면 null을 반환한다.
+getElementById와 getElementsByClassName은 HTMLCollection이므로 live로 반영된다.
+querySelector와 querySelectorAll은 NodeList 객체로 반환하는데 실시간 반영이 되지 않고 non-live이다.
+
+공백/ 탭 / 줄바꿈 등의 공백 문자는 텍스트 노드를 생성한다.
+
+자식 노드 존재 확인: hasChildNodes 메서드 / 있으면 true 반환 없으면 false
+부모 노드 탐색: parentNode
+
+요소 노드의 텍스트 조작: nodeValue / 노드 객체의 프로퍼티를 참조하면 노드 객체의 값을 반환. 노드 객체의 값이란 텍스트 노드의 텍스트이다. 텍스트 노드가 아닌 노드 즉, 문서 노드나 요소 노드의 nodeValue 프로퍼티를 참조하면 null을 반환한다.
+
+textContent : 요소 노드의 시작과 끝 사이에 모든 텍스트를 반환한다. 자식 요소 노드들의 텍스트도 포함한다.
+
+innerHTML
+요소 노드의 HTML 마크업을 취득하거나 변경한다. textContent와 다른점은 HTML 마크업을 무시하고 텍스트만 반환하지만 innerHTML 프로퍼티는 마크업이 포함된 문자열을 그대로 반환한다. 요소 노드의 innerHTML 프로퍼티에 문자열을 할당하면 요소 노드의 모든 자식 노드가 제거되고 할당한 문자열에 포함되어 있는 HTML 마크업이 파싱되어 요소 노드의 자식 노드로 DOM에 반영된다. 즉 마크업 문자열을 조작하여 DOM 조작이 가능하다.
+
+장점은 돔 조작이 간편하고 직관적이지만 크로스 사이트 스크립팅 공격에 취약하다. 또한 기존 요소 사이에 삽입할 수 없어서 유용하지 않다.
+
+요소 노드 생성 : createElement 메서드 / 메서드로 생성한 요소 노드는 기존 DOM에 자동으로 추가되지 않으므로 생성된 요소노드를 따로 DOM에 추가하는 작업을 해야한다.
+
+
+
+724쪽-745
+
+style 프로퍼티는 요소 노드의 인라인 스타일을 취득, 추가 , 변경한다.
+
+클래스 조작
+className: HTML 요소의 class 어트리뷰트 값을 취득하거나 변경한다.
+classsList: class 어트리뷰트의 정보를 담은 DOMTokenList 객체를 반환한다.(유사 배열 객체이면서 이터러블)
+
+DOMTokenList 객체의 메서드
+add / item / contains / replace / toggle 그 밖에도 forEach / entries / key / value / support 메서드를 제공한다.
+
+getComputedStyle 메서드 : style 프로퍼티는 인라인 스타일만 반환하므로 클래스를 적용한 스타일이나 상속을 통해 암묵적으로 적용된 스타일은 style 프로퍼티로 참조할 수 없다. 이때 HTML  요소에 적용되어 있는 모든 CSS 스타일을 참조해야 할 경우 이 메서드를 사용한다.
+
 
