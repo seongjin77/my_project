@@ -1,2 +1,2 @@
 # my_project
-dev for naver
+딥다이브 자바스크립트 정리 / 연습용 클론코딩 등
